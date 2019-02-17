@@ -31,7 +31,7 @@ class Student
   end
   def self.create(name,grade)
     file=Student.new(name,grade)
-    file.save
+    file.save# saves in the db
     file
   end
   def self.new_from_db(row)
@@ -39,6 +39,7 @@ class Student
     file.id=row[0]
     file.name=row[1]
     file.grade=row[2]
+
   end
   def self.find_by_name(name)
       sql = <<-SQL
