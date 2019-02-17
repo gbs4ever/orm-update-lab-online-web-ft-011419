@@ -30,7 +30,7 @@ class Student
     @id =DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
   def self.create(name,grade)
-    file=students.new(name,grade)
+    file=Student.new(name,grade)
     file.save
     file
   end
