@@ -22,7 +22,8 @@ class Student
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end
-  def self.save
+  def save
+
       sql= <<-SQL
       INSERT INTO students (name, grade)
             VALUES (?, ?);
