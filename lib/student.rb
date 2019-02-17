@@ -35,7 +35,7 @@ class Student
     file
   end
   def self.new_from_db(row)
-    file=Student.new
+    file=self.new
     file.id=row[0]
     file.name=row[1]
     file.grade=row[2]
