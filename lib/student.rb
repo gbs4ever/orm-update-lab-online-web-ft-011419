@@ -39,7 +39,7 @@ class Student
     file.id=row[0]
     file.name=row[1]
     file.grade=row[2]
-
+file
   end
   def self.find_by_name(name)
       sql = <<-SQL
